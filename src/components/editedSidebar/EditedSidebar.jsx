@@ -17,6 +17,7 @@ import { useState } from "react";
 function EditedSidebar() {
   const [first, setFirst] = useState(true);
   const [second, setSecond] = useState(true);
+  const [third, setThird] = useState(true);
   return (
     <div>
       <div className="w-[280px] min-h-[1106px] h-auto p-[24px_32px_24px_24px] bg-[#1C2536]">
@@ -120,7 +121,9 @@ function EditedSidebar() {
         >
           Edit
         </h3>
-        <div className="flex items-center justify-between mb-[30px]">
+        <div
+          className={`flex items-center justify-between ${third ? "mb-[30px]" : "mb-[20px]"}`}
+        >
           <FiShoppingBag className="text-[25px] text-[#9DA4AE]" />
           <Link
             to={"/"}
@@ -128,8 +131,28 @@ function EditedSidebar() {
           >
             Products
           </Link>
-          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+          {second ? (
+            <FaAngleRight
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setThird(!third)}
+            />
+          ) : (
+            <FaAngleDown
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setThird(!third)}
+            />
+          )}
         </div>
+        <h3
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${third ? "hidden" : "block"}`}
+        >
+          List
+        </h3>
+        <h3
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${third ? "hidden" : "block"}`}
+        >
+          Create
+        </h3>
         <div className="flex items-center justify-between mb-[30px]">
           <FiShoppingCart className="text-[25px] text-[#9DA4AE]" />
           <Link
