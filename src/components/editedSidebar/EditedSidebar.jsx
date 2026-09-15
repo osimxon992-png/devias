@@ -5,8 +5,11 @@ import { BiHomeSmile } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { MdOutlineAnalytics } from "react-icons/md";
 import { IoAnalytics } from "react-icons/io5";
-import { CiBitcoin } from "react-icons/ci";
+import { CiBitcoin, CiBookmarkCheck } from "react-icons/ci";
 import { TbUsers } from "react-icons/tb";
+import { FiShoppingBag, FiShoppingCart } from "react-icons/fi";
+import { HiOutlineTruck } from "react-icons/hi";
+import { PiGraduationCapThin } from 'react-icons/pi';
 
 function EditedSidebar() {
   return (
@@ -75,15 +78,65 @@ function EditedSidebar() {
         <h2 className="uppercase font-bold inter text-[14px] text-[#9DA4AE] mb-[23px]">
           Concepts
         </h2>
-        <div className="flex items-center gap-[16px] mb-[30px]">
+        <div className="flex items-center justify-between mb-[30px]">
           <TbUsers className="text-[25px] text-[#9DA4AE]" />
           <Link
             to={"/"}
-            className="inter font-semibold text-[18px] text-[#9DA4AE]"
+            className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
           >
             Customers
           </Link>
-          <FaAngleRight className="ml-[55px] text-[20px] text-[#4D5761]" />
+          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+        </div>
+        <div className="flex items-center justify-between mb-[30px]">
+          <FiShoppingBag className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
+          >
+            Products
+          </Link>
+          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+        </div>
+        <div className="flex items-center justify-between mb-[30px]">
+          <FiShoppingCart className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
+          >
+            Orders
+          </Link>
+          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+        </div>
+        <div className="flex items-center justify-between mb-[30px]">
+          <CiBookmarkCheck className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
+          >
+            Invoices
+          </Link>
+          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+        </div>
+        <div className="flex items-center justify-between mb-[30px]">
+          <HiOutlineTruck className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
+          >
+            Logistics
+          </Link>
+          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+        </div>
+        <div className="flex items-center justify-between mb-[30px]">
+          <PiGraduationCapThin className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
+          >
+            Logistics
+          </Link>
+          <FaAngleRight className="text-[20px] text-[#4D5761]" />
         </div>
       </div>
     </div>
