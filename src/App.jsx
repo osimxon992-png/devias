@@ -5,8 +5,8 @@ import Header from "./components/header/Header";
 
 function App() {
   return (
-    <div className="flex">
-      <aside className="min-h-screen">
+    <div className="flex h-full w-full">
+      <aside>
         <EditedSidebar />
       </aside>
       <main className="flex-1 bg-[#FFFFFFCC]">

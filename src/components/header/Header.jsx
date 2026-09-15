@@ -7,7 +7,7 @@ import opa from "../../assets/div.MuiAvatar-root.png";
 function Header() {
   return (
     <div>
-      <header className="w-full h-[64px] flex items-center justify-between p-[12px_16px]">
+      <header className="w-full h-[64px] flex items-center justify-between p-[12px_25px]">
         <CiSearch className="text-[20px] text-[#6C737F]" />
         <div className="flex items-center gap-[26px]">
           <img src={uk} alt="" />

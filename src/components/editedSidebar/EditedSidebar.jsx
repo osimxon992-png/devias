@@ -23,8 +23,8 @@ function EditedSidebar() {
   const [sixth, setSixth] = useState(true);
   const [seventh, setSeventh] = useState(true);
   return (
-    <div>
-      <div className="w-[280px] min-h-[1106px] h-auto p-[24px_32px_24px_24px] bg-[#1C2536]">
+    <div className="h-full">
+      <div className="w-[280px] min-h-screen h-full p-[24px_32px_24px_24px] bg-[#1C2536]">
         <div className="flex items-center mb-[30px]">
           <img className="mr-[16px]" src={logo} alt="" />
           <div className="mr-[75px]">
