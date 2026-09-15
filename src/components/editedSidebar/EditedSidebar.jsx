@@ -18,6 +18,10 @@ function EditedSidebar() {
   const [first, setFirst] = useState(true);
   const [second, setSecond] = useState(true);
   const [third, setThird] = useState(true);
+  const [fourth, setFourth] = useState(true);
+  const [fifth, setFifth] = useState(true);
+  const [sixth, setSixth] = useState(true);
+  const [seventh, setSeventh] = useState(true);
   return (
     <div>
       <div className="w-[280px] min-h-[1106px] h-auto p-[24px_32px_24px_24px] bg-[#1C2536]">
@@ -106,21 +110,21 @@ function EditedSidebar() {
             />
           )}
         </div>
-        <h3
+        <Link
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
         >
           List
-        </h3>
-        <h3
+        </Link>
+        <Link
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
         >
           Details
-        </h3>
-        <h3
+        </Link>
+        <Link
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
         >
           Edit
-        </h3>
+        </Link>
         <div
           className={`flex items-center justify-between ${third ? "mb-[30px]" : "mb-[20px]"}`}
         >
@@ -131,7 +135,7 @@ function EditedSidebar() {
           >
             Products
           </Link>
-          {second ? (
+          {third ? (
             <FaAngleRight
               className="text-[20px] text-[#4D5761] cursor-pointer"
               onClick={() => setThird(!third)}
@@ -143,16 +147,16 @@ function EditedSidebar() {
             />
           )}
         </div>
-        <h3
+        <Link
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${third ? "hidden" : "block"}`}
         >
           List
-        </h3>
-        <h3
+        </Link>
+        <Link
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${third ? "hidden" : "block"}`}
         >
           Create
-        </h3>
+        </Link>
         <div className="flex items-center justify-between mb-[30px]">
           <FiShoppingCart className="text-[25px] text-[#9DA4AE]" />
           <Link
@@ -163,7 +167,9 @@ function EditedSidebar() {
           </Link>
           <FaAngleRight className="text-[20px] text-[#4D5761]" />
         </div>
-        <div className="flex items-center justify-between mb-[30px]">
+        <div
+          className={`flex items-center justify-between ${fifth ? "mb-[30px]" : "mb-[20px]"}`}
+        >
           <CiBookmarkCheck className="text-[25px] text-[#9DA4AE]" />
           <Link
             to={"/"}
@@ -171,9 +177,31 @@ function EditedSidebar() {
           >
             Invoices
           </Link>
-          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+          {fifth ? (
+            <FaAngleRight
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setFifth(!fifth)}
+            />
+          ) : (
+            <FaAngleDown
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setFifth(!fifth)}
+            />
+          )}
         </div>
-        <div className="flex items-center justify-between mb-[30px]">
+        <Link
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${fifth ? "hidden" : "block"}`}
+        >
+          List
+        </Link>
+        <Link
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${fifth ? "hidden" : "block"}`}
+        >
+          Details
+        </Link>
+        <div
+          className={`flex items-center justify-between ${fourth ? "mb-[30px]" : "mb-[20px]"}`}
+        >
           <HiOutlineTruck className="text-[25px] text-[#9DA4AE]" />
           <Link
             to={"/"}
@@ -181,8 +209,28 @@ function EditedSidebar() {
           >
             Logistics
           </Link>
-          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+          {fourth ? (
+            <FaAngleRight
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setFourth(!fourth)}
+            />
+          ) : (
+            <FaAngleDown
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setFourth(!fourth)}
+            />
+          )}
         </div>
+        <Link
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${fourth ? "hidden" : "block"}`}
+        >
+          Dashboard
+        </Link>
+        <Link
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${fourth ? "hidden" : "block"}`}
+        >
+          Fleet
+        </Link>
         <div
           className={`flex items-center justify-between ${second ? "mb-[30px]" : "mb-[20px]"}`}
         >
@@ -205,17 +253,19 @@ function EditedSidebar() {
             />
           )}
         </div>
-        <h3
+        <Link
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${first ? "hidden" : "block"}`}
         >
           Dashboard
-        </h3>
-        <h3
+        </Link>
+        <Link
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${first ? "hidden" : "block"}`}
         >
           Course
-        </h3>
-        <div className="flex items-center justify-between mb-[30px]">
+        </Link>
+        <div
+          className={`flex items-center justify-between ${seventh ? "mb-[30px]" : "mb-[20px]"}`}
+        >
           <HiOutlineClipboardList className="text-[25px] text-[#9DA4AE]" />
           <Link
             to={"/"}
@@ -223,8 +273,33 @@ function EditedSidebar() {
           >
             Job Listings
           </Link>
-          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+          {seventh ? (
+            <FaAngleRight
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setSeventh(!seventh)}
+            />
+          ) : (
+            <FaAngleDown
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setSeventh(!seventh)}
+            />
+          )}
         </div>
+        <Link
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${seventh ? "hidden" : "block"}`}
+        >
+          Browse
+        </Link>
+        <Link
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${seventh ? "hidden" : "block"}`}
+        >
+          Details
+        </Link>
+        <Link
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${seventh ? "hidden" : "block"}`}
+        >
+          Create
+        </Link>
         <div className="flex items-center justify-between mb-[30px]">
           <IoShareSocialOutline className="text-[25px] text-[#9DA4AE]" />
           <Link
@@ -235,7 +310,9 @@ function EditedSidebar() {
           </Link>
           <FaAngleRight className="text-[20px] text-[#4D5761]" />
         </div>
-        <div className="flex items-center justify-between mb-[30px]">
+        <div
+          className={`flex items-center justify-between ${sixth ? "mb-[30px]" : "mb-[20px]"}`}
+        >
           <BsReverseLayoutTextSidebarReverse className="text-[25px] text-[#9DA4AE]" />
           <Link
             to={"/"}
@@ -243,8 +320,33 @@ function EditedSidebar() {
           >
             Blog
           </Link>
-          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+          {sixth ? (
+            <FaAngleRight
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setSixth(!sixth)}
+            />
+          ) : (
+            <FaAngleDown
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setSixth(!sixth)}
+            />
+          )}
         </div>
+        <Link
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${sixth ? "hidden" : "block"}`}
+        >
+          Post List
+        </Link>
+        <Link
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${sixth ? "hidden" : "block"}`}
+        >
+          Post Details
+        </Link>
+        <Link
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${sixth ? "hidden" : "block"}`}
+        >
+          Post Create
+        </Link>
         <div className="flex items-center gap-[16px] mb-[20px]">
           <LuCircleFadingArrowUp className="text-[25px] text-[#9DA4AE]" />
           <Link
