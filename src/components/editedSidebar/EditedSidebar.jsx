@@ -1,20 +1,25 @@
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 import logo from "../../assets/Link.png";
 import "./EditedSiderbar.css";
-import { BiHomeSmile } from "react-icons/bi";
+import { BiHomeSmile, BiSelectMultiple } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { MdOutlineAnalytics } from "react-icons/md";
-import { IoAnalytics } from "react-icons/io5";
-import { CiBitcoin, CiBookmarkCheck } from "react-icons/ci";
+import { IoAnalytics, IoShareSocialOutline } from "react-icons/io5";
+import { CiBitcoin, CiBookmarkCheck, CiMail } from "react-icons/ci";
 import { TbUsers } from "react-icons/tb";
 import { FiShoppingBag, FiShoppingCart } from "react-icons/fi";
-import { HiOutlineTruck } from "react-icons/hi";
-import { PiGraduationCapThin } from 'react-icons/pi';
+import { HiOutlineClipboardList, HiOutlineTruck } from "react-icons/hi";
+import { PiChats, PiGraduationCapThin } from "react-icons/pi";
+import { BsReverseLayoutTextSidebarReverse } from "react-icons/bs";
+import { LuCircleFadingArrowUp } from "react-icons/lu";
+import { useState } from "react";
 
 function EditedSidebar() {
+  const [first, setFirst] = useState(true);
+  const [second, setSecond] = useState(true);
   return (
     <div>
-      <div className="w-[280px] h-[1106px] p-[24px_32px_24px_24px] bg-[#1C2536]">
+      <div className="w-[280px] min-h-[1106px] h-auto p-[24px_32px_24px_24px] bg-[#1C2536]">
         <div className="flex items-center mb-[30px]">
           <img className="mr-[16px]" src={logo} alt="" />
           <div className="mr-[75px]">
@@ -78,7 +83,9 @@ function EditedSidebar() {
         <h2 className="uppercase font-bold inter text-[14px] text-[#9DA4AE] mb-[23px]">
           Concepts
         </h2>
-        <div className="flex items-center justify-between mb-[30px]">
+        <div
+          className={`flex items-center justify-between ${second ? "mb-[30px]" : "mb-[20px]"}`}
+        >
           <TbUsers className="text-[25px] text-[#9DA4AE]" />
           <Link
             to={"/"}
@@ -86,8 +93,33 @@ function EditedSidebar() {
           >
             Customers
           </Link>
-          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+          {second ? (
+            <FaAngleRight
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setSecond(!second)}
+            />
+          ) : (
+            <FaAngleDown
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setSecond(!second)}
+            />
+          )}
         </div>
+        <h3
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
+        >
+          List
+        </h3>
+        <h3
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
+        >
+          Details
+        </h3>
+        <h3
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
+        >
+          Edit
+        </h3>
         <div className="flex items-center justify-between mb-[30px]">
           <FiShoppingBag className="text-[25px] text-[#9DA4AE]" />
           <Link
@@ -128,15 +160,94 @@ function EditedSidebar() {
           </Link>
           <FaAngleRight className="text-[20px] text-[#4D5761]" />
         </div>
-        <div className="flex items-center justify-between mb-[30px]">
+        <div
+          className={`flex items-center justify-between ${second ? "mb-[30px]" : "mb-[20px]"}`}
+        >
           <PiGraduationCapThin className="text-[25px] text-[#9DA4AE]" />
           <Link
             to={"/"}
             className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
           >
-            Logistics
+            Academy
+          </Link>
+          {first ? (
+            <FaAngleRight
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setFirst(!first)}
+            />
+          ) : (
+            <FaAngleDown
+              className="text-[20px] text-[#4D5761] cursor-pointer"
+              onClick={() => setFirst(!first)}
+            />
+          )}
+        </div>
+        <h3
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${first ? "hidden" : "block"}`}
+        >
+          Dashboard
+        </h3>
+        <h3
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${first ? "hidden" : "block"}`}
+        >
+          Course
+        </h3>
+        <div className="flex items-center justify-between mb-[30px]">
+          <HiOutlineClipboardList className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
+          >
+            Job Listings
           </Link>
           <FaAngleRight className="text-[20px] text-[#4D5761]" />
+        </div>
+        <div className="flex items-center justify-between mb-[30px]">
+          <IoShareSocialOutline className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
+          >
+            Social Media
+          </Link>
+          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+        </div>
+        <div className="flex items-center justify-between mb-[30px]">
+          <BsReverseLayoutTextSidebarReverse className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
+          >
+            Blog
+          </Link>
+          <FaAngleRight className="text-[20px] text-[#4D5761]" />
+        </div>
+        <div className="flex items-center gap-[16px] mb-[20px]">
+          <LuCircleFadingArrowUp className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE]"
+          >
+            File Manager
+          </Link>
+        </div>
+        <div className="flex items-center gap-[16px] mb-[20px]">
+          <BiSelectMultiple className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE]"
+          >
+            Kanban
+          </Link>
+        </div>
+        <div className="flex items-center gap-[16px] mb-[20px]">
+          <PiChats className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE]"
+          >
+            Chat
+          </Link>
         </div>
       </div>
     </div>
