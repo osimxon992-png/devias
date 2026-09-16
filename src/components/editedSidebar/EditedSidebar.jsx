@@ -5,7 +5,7 @@ import { BiHomeSmile, BiSelectMultiple } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { MdOutlineAnalytics } from "react-icons/md";
 import { IoAnalytics, IoShareSocialOutline } from "react-icons/io5";
-import { CiBitcoin, CiBookmarkCheck, CiMail } from "react-icons/ci";
+import { CiBitcoin, CiBookmarkCheck } from "react-icons/ci";
 import { TbUsers } from "react-icons/tb";
 import { FiShoppingBag, FiShoppingCart } from "react-icons/fi";
 import { HiOutlineClipboardList, HiOutlineTruck } from "react-icons/hi";
@@ -50,7 +50,7 @@ function EditedSidebar() {
         <div className="flex items-center gap-[16px] mb-[20px]">
           <MdOutlineAnalytics className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/analytics"}
             className="inter font-semibold text-[18px] text-[#9DA4AE]"
           >
             Analytics

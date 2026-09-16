@@ -7,6 +7,7 @@ import BlogTwo from "./pages/blogTwo/BlogTwo";
 import BlogThree from "./pages/blogThree/BlogThree";
 import SocialMeadiaOne from "./pages/socialMediaOne/SocialMeadiaOne";
 import SocialMediaTwo from "./pages/socialMediaTwo/SocialMediaTwo";
+import Analytics from "./pages/analytics/Analytics";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Account />} />
+          <Route path="/analytics" element={<Analytics />} />
           <Route path="/blogOne" element={<BlogOne />} />
           <Route path="/blogTwo" element={<BlogTwo />} />
           <Route path="/blogThree" element={<BlogThree />} />

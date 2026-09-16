@@ -1,4 +1,3 @@
-import EditedSidebar from '../../components/editedSidebar/EditedSidebar'
 import bg from "../../assets/bg.png"
 import femaleFaceBig from "../../assets/femaleFaceBig.png"
 import { FaPaperclip, FaRegEnvelope, FaRegHeart, FaUserPlus } from 'react-icons/fa'
