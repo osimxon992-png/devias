@@ -22,6 +22,7 @@ function EditedSidebar() {
   const [fifth, setFifth] = useState(true);
   const [sixth, setSixth] = useState(true);
   const [seventh, setSeventh] = useState(true);
+  const [socialMedia, setSocialMedia] = useState(true);
   return (
     <div className="h-full">
       <div className="w-[280px] min-h-screen h-full p-[24px_32px_24px_24px] bg-[#1C2536]">
@@ -300,16 +301,37 @@ function EditedSidebar() {
         >
           Create
         </Link>
-        <div className="flex items-center justify-between mb-[30px]">
-          <IoShareSocialOutline className="text-[25px] text-[#9DA4AE]" />
-          <Link
-            to={"/"}
-            className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
-          >
-            Social Media
-          </Link>
-          <FaAngleRight className="text-[20px] text-[#4D5761]" />
-        </div>
+<div
+  className={`flex items-center justify-between ${socialMedia ? "mb-[30px]" : "mb-[20px]"}`}
+>
+  <IoShareSocialOutline className="text-[25px] text-[#9DA4AE]" />
+  <Link
+    to={"/"}
+    className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
+  >
+    Social Media
+  </Link>
+  {socialMedia ? (
+    <FaAngleRight
+      className="text-[20px] text-[#4D5761] cursor-pointer"
+      onClick={() => setSocialMedia(!socialMedia)}
+    />
+  ) : (
+    <FaAngleDown
+      className="text-[20px] text-[#4D5761] cursor-pointer"
+      onClick={() => setSocialMedia(!socialMedia)}
+    />
+  )}
+</div>
+<Link
+  className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${socialMedia ? "hidden" : "block"}`} to={"/socialMediaOne"}>
+  SocialMediaOne
+</Link>
+<Link
+  className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${socialMedia ? "hidden" : "block"}`} to={"/socialMediaTwo"}>
+  SocialMediaTwo
+</Link>
+
         <div
           className={`flex items-center justify-between ${sixth ? "mb-[30px]" : "mb-[20px]"}`}
         >
@@ -333,18 +355,15 @@ function EditedSidebar() {
           )}
         </div>
         <Link
-          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${sixth ? "hidden" : "block"}`}
-        >
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${sixth ? "hidden" : "block"}`} to={"/blogOne"}>
           Post List
         </Link>
         <Link
-          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${sixth ? "hidden" : "block"}`}
-        >
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${sixth ? "hidden" : "block"}`} to={"/blogTwo"}>
           Post Details
         </Link>
         <Link
-          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${sixth ? "hidden" : "block"}`}
-        >
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${sixth ? "hidden" : "block"}`} to={"/blogThree"}>
           Post Create
         </Link>
         <div className="flex items-center gap-[16px] mb-[20px]">
