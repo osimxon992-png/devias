@@ -8,6 +8,7 @@ import BlogThree from "./pages/blogThree/BlogThree";
 import SocialMeadiaOne from "./pages/socialMediaOne/SocialMeadiaOne";
 import SocialMediaTwo from "./pages/socialMediaTwo/SocialMediaTwo";
 import Analytics from "./pages/analytics/Analytics";
+import Order from "./pages/order/Order";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/blogThree" element={<BlogThree />} />
           <Route path="/socialMediaOne" element={<SocialMeadiaOne />} />
           <Route path="/socialMediaTwo" element={<SocialMediaTwo />} />
+          <Route path="/order" element={<Order />} />
         </Routes>
       </main>
     </div>
