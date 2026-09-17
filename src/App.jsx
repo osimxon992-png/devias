@@ -15,7 +15,7 @@ function App() {
       <aside>
         <EditedSidebar />
       </aside>
-      <main className="flex-1 bg-[#fff]">
+      <main className="flex-1 bg-[#FFFFFF]">
         <Header />
         <Routes>
           <Route path="/" element={<Account />} />
