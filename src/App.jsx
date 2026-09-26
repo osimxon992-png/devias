@@ -34,6 +34,8 @@ function App() {
           <Route path="/orderTwo" element={<OrderTwo />} />
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/invoicesTwo" element={<InvoicesTwo />} />
+                    <Route path='/fileManager' element={<FileManager/>}></Route>
+
         </Routes>
       </main>
     </div>
