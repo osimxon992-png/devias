@@ -188,7 +188,7 @@ function InvoicesTwo() {
           </h1>
           <div className="flex items-center gap-[24px] mt-[20px]">
             <div className="w-[190px] h-[272px] flex items-center justify-center rounded-[24px] bg-[#6366F10A]">
-              <h1 className="font-bold text-[17px] leading-[21px] text-[#6366F1] ">
+              <h1 className="font-bold text-[17px] leading-[20px] text-[#6366F1] ">
                 Very good
               </h1>
               {/* <Child /> */}
