@@ -430,6 +430,16 @@ function EditedSidebar() {
             Chat
           </Link>
         </div>
+        <div className={`flex items-center gap-[16px] mb-[20px] `}>
+          <PiChats className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/login"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE]"
+          >
+            Login
+          </Link>
+        </div>
+        
       </div>
     </div>
   );
