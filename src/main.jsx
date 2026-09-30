@@ -3,8 +3,15 @@ import ReactDOM from "react-dom/client";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import theme from "./charts/theme";
+import theme from "./mui/charts/theme";
 import "./index.css";
+import ecommerce from "./mui/line/ecommerce"
+import cryptoFirst from "./mui/line/cryptoFirst";
+import cryptoSecond from "./mui/line/cryptoSecond";
+import cryptoThird from "./mui/pie/cryptoThird";
+import Ecommerce_pie from "./mui/pie/Ecommerce_pie"
+
+
 
 const rootElement = document.getElementById("root");
 
@@ -16,7 +23,7 @@ const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} ecommerce={ecommerce} cryptoFirst={cryptoFirst} cryptoSecond={cryptoSecond} cryptoThird={cryptoThird} Ecommerce_pie={Ecommerce_pie}>
       <CssBaseline />
       <BrowserRouter>
         <App />

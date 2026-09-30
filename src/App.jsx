@@ -9,6 +9,9 @@ import SocialMeadiaOne from "./pages/socialMediaOne/SocialMeadiaOne";
 import SocialMediaTwo from "./pages/socialMediaTwo/SocialMediaTwo";
 import Analytics from "./pages/analytics/Analytics";
 import Order from "./pages/order/Order";
+import Crypto from "./pages/crypto/Crypto";
+import Ecommerce from "./pages/eCommerce/Ecommerce";
+
 
 function App() {
   return (
@@ -27,6 +30,8 @@ function App() {
           <Route path="/socialMediaOne" element={<SocialMeadiaOne />} />
           <Route path="/socialMediaTwo" element={<SocialMediaTwo />} />
           <Route path="/order" element={<Order />} />
+          <Route path="/crypto" element={<Crypto />} />
+          <Route path="/ecommerce" element={<Ecommerce />} />
         </Routes>
       </main>
     </div>
