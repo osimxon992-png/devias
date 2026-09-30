@@ -1,7 +1,9 @@
 import { Route, Routes } from "react-router-dom";
+
 import EditedSidebar from "./components/editedSidebar/EditedSidebar";
 import Account from "./pages/account/Account";
 import Header from "./components/header/Header";
+
 import BlogOne from "./pages/blogOne/BlogOne";
 import BlogTwo from "./pages/blogTwo/BlogTwo";
 import BlogThree from "./pages/blogThree/BlogThree";
@@ -12,6 +14,13 @@ import Order from "./pages/order/Order";
 import OrderTwo from "./pages/orderTwo/OrderTwo";
 import Invoices from "./pages/invoices/Invoices";
 import InvoicesTwo from "./pages/invociesTwo/InvoicesTwo";
+
+import Customers from "./pages/customers/Customers";
+import CustomerDetails from "./pages/customers/CustomerDetails";
+import CustomerEdit from "./pages/customers/CustomerEdit";
+import Mail from "./pages/Mail";
+import Chat from "./pages/Chat";
+
 import "./App.css";
 
 function App() {
@@ -20,10 +29,14 @@ function App() {
       <aside>
         <EditedSidebar />
       </aside>
+
       <main className="flex-1 bg-[#FFFFFF]">
         <Header />
+
         <Routes>
           <Route path="/" element={<Account />} />
+
+          {/* GitHub'dagi sahifalar */}
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/blogOne" element={<BlogOne />} />
           <Route path="/blogTwo" element={<BlogTwo />} />
@@ -34,6 +47,20 @@ function App() {
           <Route path="/orderTwo" element={<OrderTwo />} />
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/invoicesTwo" element={<InvoicesTwo />} />
+
+          {/* Sening Customers */}
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/customers/details" element={<CustomerDetails />} />
+          <Route path="/customers/edit" element={<CustomerEdit />} />
+          <Route
+            path="/customers/details/:id/details"
+            element={<CustomerDetails />}
+          />
+          <Route path="/customers/edit/:id/edit" element={<CustomerEdit />} />
+
+          {/* Sening Mail va Chat */}
+          <Route path="/mail" element={<Mail />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </main>
     </div>
