@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import EditedSidebar from "./components/editedSidebar/EditedSidebar";
 import Account from "./pages/account/Account";
@@ -28,20 +28,37 @@ import Profile from "./pages/Profile/Profile";
 
 import FileManager from "./pages/fileManager/FileManager";
 import Login from "./pages/login/Login";
-import Register from './pages/register/Register';
-import Forgot from './pages/forgot/Forgot';
-import Reset from './pages/reset/Reset';
-import Verify from './pages/verify/Verify';
+import Register from "./pages/register/Register";
+import Forgot from "./pages/forgot/Forgot";
+import Reset from "./pages/reset/Reset";
+import Verify from "./pages/verify/Verify";
 
 function App() {
-  return (
-    <div className="flex h-full w-full">
-      <aside>
-        <EditedSidebar />
-      </aside>
+  const { pathname } = useLocation();
+  const isAuthPage = [
+    "/login",
+    "/register",
+    "/verifyCode",
+    "/forgotPassword",
+    "/resetPassword",
+  ].includes(pathname);
 
-      <main className="flex-1 bg-[#FFFFFF]">
-        <Header />
+  return (
+    <div className={isAuthPage ? "min-h-screen w-full" : "flex h-full w-full"}>
+      {!isAuthPage && (
+        <aside>
+          <EditedSidebar />
+        </aside>
+      )}
+
+      <main
+        className={
+          isAuthPage
+            ? "flex min-h-screen w-full items-center justify-center bg-[#FFFFFF]"
+            : "flex-1 bg-[#FFFFFF]"
+        }
+      >
+        {!isAuthPage && <Header />}
 
         <Routes>
           <Route path="/" element={<Account />} />
@@ -62,13 +79,13 @@ function App() {
           <Route path="/invoicesTwo" element={<InvoicesTwo />} />
           <Route path="/fileManager" element={<FileManager />}></Route>
           <Route path="/login" element={<Login />} />
-          <Route path='/register' element={<Register/>}/>
-          <Route path='/forgotPassword' element={<Forgot/>}/>
-          <Route path='/resetPassword' element={<Reset/>}/>
-          <Route path='/verifyCode' element={<Verify/>}/>
-           <Route path="/product" element={<Product/>} />
-           <Route path="/productTwo" element={<ProductTwo />} />
-           <Route path="/kanban" element={<Kanban />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgotPassword" element={<Forgot />} />
+          <Route path="/resetPassword" element={<Reset />} />
+          <Route path="/verifyCode" element={<Verify />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/productTwo" element={<ProductTwo />} />
+          <Route path="/kanban" element={<Kanban />} />
 
           <Route path="/customers" element={<Customers />} />
           <Route path="/customers/details" element={<CustomerDetails />} />

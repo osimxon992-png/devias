@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <div className=" flex items-center gap-[30px] ">
+    <div className=" flex items-center gap-[160px] ">
       <div>
-        <img className=" w-[720px] " src={loginBack} alt="" />
+        <img className="w-[912px] h-[776px]" src={loginBack} alt="" />
       </div>
-      <div className=" flex flex-col items-start gap-[30px] ">
+      <div className=" flex flex-col items-start gap-[30px] mr-[100px]">
         <div className=" flex items-center gap-[10px] ">
           <img className=" w-[24px] h-[24px] " src={loginIcon} alt="" />
           <img className=" w-[104px] h-[17px] " src={loginText} alt="" />
@@ -46,7 +46,6 @@ function Login() {
           Continue
         </button>
         <Link to={"/forgotPassword"}>
-        
           <p className=" text-[rgba(99,102,241,1)] ">Forgot Password?</p>
         </Link>
       </div>

@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 
 function Register() {
   return (
-    <div className=" flex items-center gap-[30px] ">
+    <div className=" flex items-center gap-[160px] ">
       <div>
-        <img className=" w-[720px] " src={loginBack} alt="" />
+        <img className=" w-[912px] h-[776px] " src={loginBack} alt="" />
       </div>
-      <div className=" flex flex-col items-start gap-[30px] ">
+      <div className=" flex flex-col items-start gap-[30px] mr-[100px]">
         <div className=" flex items-center gap-[10px] ">
           <img className=" w-[24px] h-[24px] " src={loginIcon} alt="" />
           <img className=" w-[104px] h-[17px] " src={loginText} alt="" />
@@ -49,7 +49,12 @@ function Register() {
           type="password"
           placeholder=" Password "
         />
-        <p className=' text-[rgba(108,115,127,1)] '><input type='checkbox' /> I have read the <span className=' text-[rgba(99,102,241,1)] '>Terms and conditions</span></p>
+        <p className=" text-[rgba(108,115,127,1)] ">
+          <input type="checkbox" /> I have read the{" "}
+          <span className=" text-[rgba(99,102,241,1)] ">
+            Terms and conditions
+          </span>
+        </p>
         <button className=" w-[472px] h-[55px]  bg-[rgba(99,102,241,1)] text-white rounded-[12px]  px-[20px] border-gray-600 ">
           Register
         </button>
