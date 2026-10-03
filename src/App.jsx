@@ -12,6 +12,9 @@ import Order from "./pages/order/Order";
 import OrderTwo from "./pages/orderTwo/OrderTwo";
 import Invoices from "./pages/invoices/Invoices";
 import InvoicesTwo from "./pages/invociesTwo/InvoicesTwo";
+import Product from "./pages/product/Product";
+import ProductTwo from "./pages/productTwo/ProductTwo";
+import Kanban from "./pages/kanban/Kanban";
 import "./App.css";
 
 function App() {
@@ -34,6 +37,9 @@ function App() {
           <Route path="/orderTwo" element={<OrderTwo />} />
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/invoicesTwo" element={<InvoicesTwo />} />
+           <Route path="/product" element={<Product/>} />
+           <Route path="/productTwo" element={<ProductTwo />} />
+           <Route path="/kanban" element={<Kanban />} />
         </Routes>
       </main>
     </div>

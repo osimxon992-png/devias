@@ -150,11 +150,13 @@ function EditedSidebar() {
           )}
         </div>
         <Link
+         to={"/product"}
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${third ? "hidden" : "block"}`}
         >
           List
         </Link>
         <Link
+         to={"/productTwo"}
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${third ? "hidden" : "block"}`}
         >
           Create
@@ -415,7 +417,7 @@ function EditedSidebar() {
         <div className="flex items-center gap-[16px] mb-[20px]">
           <BiSelectMultiple className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/kanban"}
             className="inter font-semibold text-[18px] text-[#9DA4AE]"
           >
             Kanban
