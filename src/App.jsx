@@ -13,14 +13,12 @@ import Analytics from "./pages/analytics/Analytics";
 import Order from "./pages/order/Order";
 import Crypto from "./pages/crypto/Crypto";
 import Ecommerce from "./pages/eCommerce/Ecommerce";
-
 import OrderTwo from "./pages/orderTwo/OrderTwo";
 import Invoices from "./pages/invoices/Invoices";
 import InvoicesTwo from "./pages/invociesTwo/InvoicesTwo";
 import Product from "./pages/product/Product";
 import ProductTwo from "./pages/productTwo/ProductTwo";
 import Kanban from "./pages/kanban/Kanban";
-
 import Customers from "./pages/customers/Customers";
 import CustomerDetails from "./pages/customers/CustomerDetails";
 import CustomerEdit from "./pages/customers/CustomerEdit";
@@ -28,7 +26,12 @@ import Mail from "./pages/Mail";
 import Chat from "./pages/Chat";
 import Profile from "./pages/Profile/Profile";
 
-import "./App.css";
+import FileManager from "./pages/fileManager/FileManager";
+import Login from "./pages/login/Login";
+import Register from './pages/register/Register';
+import Forgot from './pages/forgot/Forgot';
+import Reset from './pages/reset/Reset';
+import Verify from './pages/verify/Verify';
 
 function App() {
   return (
@@ -45,7 +48,6 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/account" element={<Profile />} />
 
-          {/* GitHub'dagi sahifalar */}
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/blogOne" element={<BlogOne />} />
           <Route path="/blogTwo" element={<BlogTwo />} />
@@ -58,11 +60,16 @@ function App() {
           <Route path="/orderTwo" element={<OrderTwo />} />
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/invoicesTwo" element={<InvoicesTwo />} />
+          <Route path="/fileManager" element={<FileManager />}></Route>
+          <Route path="/login" element={<Login />} />
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/forgotPassword' element={<Forgot/>}/>
+          <Route path='/resetPassword' element={<Reset/>}/>
+          <Route path='/verifyCode' element={<Verify/>}/>
            <Route path="/product" element={<Product/>} />
            <Route path="/productTwo" element={<ProductTwo />} />
            <Route path="/kanban" element={<Kanban />} />
 
-          {/* Sening Customers */}
           <Route path="/customers" element={<Customers />} />
           <Route path="/customers/details" element={<CustomerDetails />} />
           <Route path="/customers/edit" element={<CustomerEdit />} />
@@ -72,7 +79,6 @@ function App() {
           />
           <Route path="/customers/edit/:id/edit" element={<CustomerEdit />} />
 
-          {/* Sening Mail va Chat */}
           <Route path="/mail" element={<Mail />} />
           <Route path="/chat" element={<Chat />} />
         </Routes>
