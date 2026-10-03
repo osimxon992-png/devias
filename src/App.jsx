@@ -14,6 +14,9 @@ import Order from "./pages/order/Order";
 import OrderTwo from "./pages/orderTwo/OrderTwo";
 import Invoices from "./pages/invoices/Invoices";
 import InvoicesTwo from "./pages/invociesTwo/InvoicesTwo";
+import Product from "./pages/product/Product";
+import ProductTwo from "./pages/productTwo/ProductTwo";
+import Kanban from "./pages/kanban/Kanban";
 
 import Customers from "./pages/customers/Customers";
 import CustomerDetails from "./pages/customers/CustomerDetails";
@@ -47,6 +50,9 @@ function App() {
           <Route path="/orderTwo" element={<OrderTwo />} />
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/invoicesTwo" element={<InvoicesTwo />} />
+           <Route path="/product" element={<Product/>} />
+           <Route path="/productTwo" element={<ProductTwo />} />
+           <Route path="/kanban" element={<Kanban />} />
 
           {/* Sening Customers */}
           <Route path="/customers" element={<Customers />} />
