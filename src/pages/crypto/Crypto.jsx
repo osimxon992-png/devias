@@ -14,8 +14,8 @@ import {
   RiArrowRightUpLongLine,
 } from "react-icons/ri";
 import { GoArrowDownRight, GoArrowUpRight } from "react-icons/go";
-import GridDemo from "../../components/GridDemo/GridDemo";
-import GridDemoSecond from "../../components/gridDemoSecond/GridDemoSecond";  
+import GridDemo from "../../components/gridDemo/GridDemo";
+import GridDemoSecond from "../../components/gridDemoSecond/GridDemoSecond";
 import DonutChart from "../../components/donutCrypto/DonutCrypto";
 
 function Crypto() {
@@ -45,7 +45,7 @@ function Crypto() {
                   <BsThreeDots className="text-[#6C737F] text-[17px]" />
                 </div>
               </div>
-              <GridDemo/>
+              <GridDemo />
               <div>
                 <div className="flex items-center">
                   <img
@@ -112,7 +112,7 @@ function Crypto() {
               <p className="text-[#6C737F]">Balance across all your accounts</p>
             </div>
             <div className="flex items-center  gap-[24px]">
-              <DonutChart/>
+              <DonutChart />
               <div>
                 <h3 className="text-[#6C737F] pt-[62px] text-[12px]">
                   TOTAL BALANCE
@@ -255,9 +255,9 @@ function Crypto() {
               Unlock exclusive features like Test Networks, Test Swaps, and
               more.
             </p>
-          <button className="bg-[#6366F1] text-[#FFFFFF] rounded-[12px] w-[98px] h-[40px] ml-[165px] mt-[19px] text-[14px]">
-            Upgrade
-          </button>
+            <button className="bg-[#6366F1] text-[#FFFFFF] rounded-[12px] w-[98px] h-[40px] ml-[165px] mt-[19px] text-[14px]">
+              Upgrade
+            </button>
           </div>
         </div>
       </div>
