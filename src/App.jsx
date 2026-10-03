@@ -29,6 +29,12 @@ import Chat from "./pages/Chat";
 import Profile from "./pages/Profile/Profile";
 
 import "./App.css";
+import FileManager from "./pages/fileManager/FileManager";
+import Login from "./pages/login/Login";
+import Register from './pages/register/Register';
+import Forgot from './pages/forgot/Forgot';
+import Reset from './pages/reset/Reset';
+import Verify from './pages/verify/Verify';
 
 function App() {
   return (
@@ -58,6 +64,12 @@ function App() {
           <Route path="/orderTwo" element={<OrderTwo />} />
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/invoicesTwo" element={<InvoicesTwo />} />
+          <Route path="/fileManager" element={<FileManager />}></Route>
+          <Route path="/login" element={<Login />} />
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/forgotPassword' element={<Forgot/>}/>
+          <Route path='/resetPassword' element={<Reset/>}/>
+          <Route path='/verifyCode' element={<Verify/>}/>
            <Route path="/product" element={<Product/>} />
            <Route path="/productTwo" element={<ProductTwo />} />
            <Route path="/kanban" element={<Kanban />} />
