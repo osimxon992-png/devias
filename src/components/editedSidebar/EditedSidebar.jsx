@@ -95,7 +95,7 @@ function EditedSidebar() {
         >
           <TbUsers className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/customers"}
             className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
           >
             Customers
@@ -113,16 +113,21 @@ function EditedSidebar() {
           )}
         </div>
         <Link
+          to={"/customers"}
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
         >
           List
         </Link>
         <Link
-          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
+          to="/customers/details"
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${
+            second ? "hidden" : "block"
+          }`}
         >
           Details
         </Link>
         <Link
+          to={"/customers/edit"}
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
         >
           Edit
@@ -426,7 +431,16 @@ function EditedSidebar() {
         <div className="flex items-center gap-[16px] mb-[20px]">
           <PiChats className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/Mail"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE]"
+          >
+            Mail
+          </Link>
+        </div>
+        <div className="flex items-center gap-[16px] mb-[20px]">
+          <PiChats className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/Chat"}
             className="inter font-semibold text-[18px] text-[#9DA4AE]"
           >
             Chat
