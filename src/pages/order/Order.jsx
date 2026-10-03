@@ -1,7 +1,4 @@
-import img from "../../assets/img.png";
-import img1 from "../../assets/img1.png";
-import { FiUsers } from "react-icons/fi";
-import { IoIosNotificationsOutline } from "react-icons/io";
+import "./Order.css";
 import { CiCalendar, CiSearch } from "react-icons/ci";
 import { FaArrowLeft } from "react-icons/fa";
 import { MdOutlineModeEdit, MdOutlineShoppingCart } from "react-icons/md";
@@ -11,19 +8,9 @@ import { HiChevronLeft, HiOutlineChevronRight } from "react-icons/hi2";
 function Order() {
   return (
     <div>
-      <div className="flex items-center justify-between pl-[300px] py-[12px] ">
-        <CiSearch className="w-[24px] h-[24px] text-[#6C737F] " />
-
-        <div className="flex items-center gap-[20px] pr-[17px] ">
-          <img src={img} alt="" />
-          <IoIosNotificationsOutline className="w-[24px] h-[24px] text-[#6C737F]" />
-          <FiUsers className="w-[24px] h-[24px] text-[#6C737F]" />
-          <img src={img1} alt="" />
-        </div>
-      </div>
-      <div className="main flex items-start flex-col gap-[32px] max-w-[1400px] pl-[368px] py-[63px] ">
+      <div className="main flex items-start flex-col gap-[32px] max-w-[1400px] pl-[100px] py-[63px] pr-[100px] ">
         <div className="flex items-center gap-[8px]  ">
-          <FaArrowLeft />
+          <FaArrowLeft className="text-black" />
           <h1 className="font-medium text-[14px] leading-[22px] text-[#111927]">
             Orders
           </h1>
@@ -38,7 +25,7 @@ function Order() {
               <h2 className="font-normal text-[14px] leading-[22px] text-[#6C737F]">
                 Placed on
               </h2>
-              <CiCalendar className="w-[24px] h-[24px]" />
+              <CiCalendar className="w-[24px] h-[24px] text-[#6C737F]" />
 
               <h3 className="font-normal text-[14px] leading-[22px] text-[#111927]">
                 31/01/2024 11:19
@@ -51,7 +38,7 @@ function Order() {
               <h1 className="font-semibold text-[14px] leading-[25px] text-[#111927]">
                 Edit
               </h1>
-              <MdOutlineModeEdit className="w-[20px] h-[20px]" />
+              <MdOutlineModeEdit className="w-[20px] h-[20px] text-[#111927]" />
             </div>
             <button className="w-[108px] h-[40px] rounded-[12px] bg-[#6366F1] box-shadow-[0px_1px_5px_0px_#00000014] font-semibold text-[14px] leading-[25px] text-[#FFFFFF]">
               Action
@@ -67,7 +54,7 @@ function Order() {
           className="w-full h-[610px] p-[25px] rounded-[20px] bg-[#FFFFFF]"
         >
           <div className="border-b p-[17px]  border-[#F2F4F7]">
-            <h1 className="font-bold ">Basic info</h1>
+            <h1 className="font-bold text-[#111927]">Basic info</h1>
           </div>
           <div className="flex items-start  gap-[114.04px] border-[#F2F4F7] border-b p-[17px]">
             <h1 className="font-medium text-[14px] leading-[22px] text-[#111927]">
@@ -147,7 +134,7 @@ function Order() {
           className="w-full h-[300px] rounded-[20px] bg-[#FFFFFF]"
         >
           <div className="p-[29px]  border-[#F2F4F7]">
-            <h1 className="font-bold text-[17px] leading-[20px] ">
+            <h1 className="font-bold text-[17px] text-[#111927] leading-[20px] ">
               Order items
             </h1>
           </div>
@@ -226,7 +213,7 @@ function Order() {
           <div className="flex items-start flex-col gap-[45px] px-[24px] ">
             <div className="flex items-center gap-[16px]">
               <div className="w-[40px] h-[40px] rounded-[20px] bg-[#E5E7EB] justify-center flex items-center">
-                <MdOutlineShoppingCart className="w-[24px] h-[23px] " />
+                <MdOutlineShoppingCart className="w-[24px] h-[23px] text-[#000000] " />
               </div>
               <div>
                 <h1 className="font-normal text-[14px] leading-[22px] text-[#111927] ">
@@ -239,7 +226,7 @@ function Order() {
             </div>
             <div className="flex items-center gap-[16px]">
               <div className="w-[40px] h-[40px] rounded-[20px] bg-[#E5E7EB] justify-center flex items-center">
-                <MdOutlineShoppingCart className="w-[24px] h-[23px] " />
+                <MdOutlineShoppingCart className="w-[24px] h-[23px] text-[#000000] " />
               </div>
               <div>
                 <h1 className="font-normal text-[14px] leading-[22px] text-[#111927] ">
@@ -254,7 +241,7 @@ function Order() {
 
           <div className="flex items-center flex-col py-[29px] ">
             <h1 className="font-semibold text-[14px] leading-[25px] text-[#111927]">
-              Load more
+              Lead more
             </h1>
           </div>
         </div>
