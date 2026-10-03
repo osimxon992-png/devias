@@ -60,7 +60,7 @@ function EditedSidebar() {
         <div className="flex items-center gap-[16px] mb-[20px]">
           <IoAnalytics className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/ecommerce"}
             className="inter font-semibold text-[18px] text-[#9DA4AE]"
           >
             E-Commerce
@@ -69,7 +69,7 @@ function EditedSidebar() {
         <div className="flex items-center gap-[16px] mb-[20px]">
           <CiBitcoin className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/crypto"}
             className="inter font-semibold text-[18px] text-[#9DA4AE]"
           >
             Crypto
@@ -81,7 +81,7 @@ function EditedSidebar() {
         <div className="flex items-center gap-[16px] mb-[30px]">
           <BiHomeSmile className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/account"}
             className="inter font-semibold text-[18px] text-[#9DA4AE]"
           >
             Account
@@ -95,7 +95,7 @@ function EditedSidebar() {
         >
           <TbUsers className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/customers"}
             className="inter font-semibold text-[18px] text-[#9DA4AE] w-[150px]"
           >
             Customers
@@ -113,16 +113,21 @@ function EditedSidebar() {
           )}
         </div>
         <Link
+          to={"/customers"}
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
         >
           List
         </Link>
         <Link
-          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
+          to="/customers/details"
+          className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${
+            second ? "hidden" : "block"
+          }`}
         >
           Details
         </Link>
         <Link
+          to={"/customers/edit"}
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${second ? "hidden" : "block"}`}
         >
           Edit
@@ -150,11 +155,13 @@ function EditedSidebar() {
           )}
         </div>
         <Link
+         to={"/product"}
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${third ? "hidden" : "block"}`}
         >
           List
         </Link>
         <Link
+         to={"/productTwo"}
           className={`inter font-medium text-[#9DA4AE] ml-[40px] mb-[25px] ${third ? "hidden" : "block"}`}
         >
           Create
@@ -415,7 +422,7 @@ function EditedSidebar() {
         <div className="flex items-center gap-[16px] mb-[20px]">
           <BiSelectMultiple className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/kanban"}
             className="inter font-semibold text-[18px] text-[#9DA4AE]"
           >
             Kanban
@@ -424,7 +431,16 @@ function EditedSidebar() {
         <div className="flex items-center gap-[16px] mb-[20px]">
           <PiChats className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/Mail"}
+            className="inter font-semibold text-[18px] text-[#9DA4AE]"
+          >
+            Mail
+          </Link>
+        </div>
+        <div className="flex items-center gap-[16px] mb-[20px]">
+          <PiChats className="text-[25px] text-[#9DA4AE]" />
+          <Link
+            to={"/Chat"}
             className="inter font-semibold text-[18px] text-[#9DA4AE]"
           >
             Chat
