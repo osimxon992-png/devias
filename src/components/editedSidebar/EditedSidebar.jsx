@@ -60,7 +60,7 @@ function EditedSidebar() {
         <div className="flex items-center gap-[16px] mb-[20px]">
           <IoAnalytics className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/ecommerce"}
             className="inter font-semibold text-[18px] text-[#9DA4AE]"
           >
             E-Commerce
@@ -69,7 +69,7 @@ function EditedSidebar() {
         <div className="flex items-center gap-[16px] mb-[20px]">
           <CiBitcoin className="text-[25px] text-[#9DA4AE]" />
           <Link
-            to={"/"}
+            to={"/crypto"}
             className="inter font-semibold text-[18px] text-[#9DA4AE]"
           >
             Crypto

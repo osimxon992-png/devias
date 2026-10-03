@@ -11,6 +11,9 @@ import SocialMeadiaOne from "./pages/socialMediaOne/SocialMeadiaOne";
 import SocialMediaTwo from "./pages/socialMediaTwo/SocialMediaTwo";
 import Analytics from "./pages/analytics/Analytics";
 import Order from "./pages/order/Order";
+import Crypto from "./pages/crypto/Crypto";
+import Ecommerce from "./pages/eCommerce/Ecommerce";
+
 import OrderTwo from "./pages/orderTwo/OrderTwo";
 import Invoices from "./pages/invoices/Invoices";
 import InvoicesTwo from "./pages/invociesTwo/InvoicesTwo";
@@ -50,6 +53,8 @@ function App() {
           <Route path="/socialMediaOne" element={<SocialMeadiaOne />} />
           <Route path="/socialMediaTwo" element={<SocialMediaTwo />} />
           <Route path="/order" element={<Order />} />
+          <Route path="/crypto" element={<Crypto />} />
+          <Route path="/ecommerce" element={<Ecommerce />} />
           <Route path="/orderTwo" element={<OrderTwo />} />
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/invoicesTwo" element={<InvoicesTwo />} />
