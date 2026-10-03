@@ -23,6 +23,7 @@ import CustomerDetails from "./pages/customers/CustomerDetails";
 import CustomerEdit from "./pages/customers/CustomerEdit";
 import Mail from "./pages/Mail";
 import Chat from "./pages/Chat";
+import Profile from "./pages/Profile/Profile";
 
 import "./App.css";
 
@@ -38,6 +39,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Account />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/account" element={<Profile />} />
 
           {/* GitHub'dagi sahifalar */}
           <Route path="/analytics" element={<Analytics />} />
